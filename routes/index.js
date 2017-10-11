@@ -14,12 +14,16 @@ router.get('/convert', function(req, res, next) {
 
     var dollars = req.query.dollars;
     var toCurrency = req.query.to_currency;
+    var fromCurrency = req.query.from_currency;
 
     var converted = dollars * exchangeRates[toCurrency];
+    var converted1 = dollars * exchangeRates[fromCurrency];
     res.render('results', {
       dollars: dollars,
         toCurrency: toCurrency,
-        converted: converted});
+        fromCurrency: fromCurrency,
+        converted: converted,
+        converted1: converted1});
 });
 
 
