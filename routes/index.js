@@ -82,5 +82,4 @@ router.get('/convert', function(req, res, next) {
         fromCurrency: fromCurrency,
         converted: converted});
 });
-
 module.exports = router;
